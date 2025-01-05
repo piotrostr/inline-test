@@ -2,6 +2,13 @@
 
 Rust-like inline tests for Python. Write and run tests right next to your code!
 
+Haven't tested this on large projects, but it provides the amazing feature of
+rust which is a single file with its tests
+
+Surprised this didn't exist prior
+
+No async, no fixtures, no fancy stuff
+
 ## Installation
 
 ```bash
@@ -30,7 +37,7 @@ def test_add_negative():
 Run tests:
 
 ```bash
-# Run all tests in current directory
+# Run all tests in project
 run-tests
 
 # Run specific files
