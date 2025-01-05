@@ -33,3 +33,8 @@ def test_add_negative():
 @test()
 def test_that_fails():
     assert 1 == 2, "This test should fail"
+
+
+@test()
+def test_that_checks_if_state_is_reset():
+    assert state["count"] == 0
