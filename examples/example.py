@@ -1,4 +1,19 @@
-from inline_tests.decorators import test, before_each, after_each
+from intest import test, before_all, before_each, after_each
+
+
+@before_all
+def setup_all():
+    print("Running before all tests")
+
+
+@test()
+def test_something():
+    assert 1 + 1 == 2
+
+
+@test(skip=True, skip_reason="Not implemented yet")
+def test_skipped():
+    pass
 
 
 def add(a: int, b: int) -> int:

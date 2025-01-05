@@ -1,4 +1,4 @@
-# inline-tests
+# intest
 
 Rust-like inline tests for Python. Write and run tests right next to your code!
 
@@ -12,7 +12,7 @@ No async, no fixtures, no fancy stuff
 ## Installation
 
 ```bash
-pip install inline-tests
+pip install intest
 ```
 
 ## Usage
@@ -20,7 +20,7 @@ pip install inline-tests
 In your Python files:
 
 ```python
-from inline_tests.decorators import test, before_each, after_each
+from intest.decorators import test, before_each, after_each
 
 def add(a: int, b: int) -> int:
     return a + b
@@ -38,14 +38,14 @@ Run tests:
 
 ```bash
 # Run all tests in project
-run-tests
+intest
 
 # Run specific files
-run-tests file1.py file2.py
+intest file1.py file2.py
 
 # Run tests with specific tag
-run-tests --tag math
+intest --tag math
 
 # Run tests in specific directory
-run-tests --path /path/to/project
+intest --path /path/to/project
 ```
