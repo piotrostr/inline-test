@@ -1,10 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
 name = "inline_test"
 version = "0.1.0"
-description = "Add your description here"
+description = "rust-style test macro"
 readme = "README.md"
 requires-python = ">=3.9"
 dependencies = []
+license = "MIT"
 
 [project.scripts]
 run-tests = "inline_tests.runner:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["inline_tests"]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+version = "2.4"
